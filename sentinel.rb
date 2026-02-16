@@ -1,22 +1,22 @@
 class Sentinel < Formula
   desc "Cross-platform file system watcher with real-time webhook notifications"
   homepage "https://github.com/icobani/Sentinel"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/icobani/Sentinel/releases/download/v1.0.1/sentinel-darwin-arm64.tar.gz"
-      sha256 "ec3dd30679de40c545d1b48967807282b1168f133f7036a8bdf800ecd452755a"
+      url "https://github.com/icobani/Sentinel/releases/download/v1.0.2/sentinel-darwin-arm64.tar.gz"
+      sha256 "009daa89bef607f5d4d2b26718c32b03c88fce42a1537d5e990f21833655f06c"
     else
-      url "https://github.com/icobani/Sentinel/releases/download/v1.0.1/sentinel-darwin-amd64.tar.gz"
-      sha256 "75881f9c1a4905be82d833d0e2f3dbbaf0361cc6d5207531f78a990853aeebdd"
+      url "https://github.com/icobani/Sentinel/releases/download/v1.0.2/sentinel-darwin-amd64.tar.gz"
+      sha256 "2f0597207307e9ed85a2a203b246bacb19ecd71e5cda204000f3ce4702669568"
     end
   end
 
   on_linux do
-    url "https://github.com/icobani/Sentinel/releases/download/v1.0.1/sentinel-linux-amd64.tar.gz"
-    sha256 "4135b2546ff2e45f14b39eeb2227dbb40ded791399ae0aedc120c3ba130e4306"
+    url "https://github.com/icobani/Sentinel/releases/download/v1.0.2/sentinel-linux-amd64.tar.gz"
+    sha256 "828140c5a59bc6d83da88bc5e5e0df6b7adf32f454a05e7436fd516809c0dd03"
   end
 
   def install
