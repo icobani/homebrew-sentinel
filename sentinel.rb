@@ -1,27 +1,26 @@
 class Sentinel < Formula
   desc "Cross-platform file system watcher with real-time webhook notifications"
   homepage "https://github.com/icobani/Sentinel"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/icobani/Sentinel/releases/download/v1.0.0/sentinel-darwin-arm64.tar.gz"
-      sha256 "96fef64a730ab6b820a9982dd048b1db2368ddbe64e23fed8589f3d9b88caca7"
+      url "https://github.com/icobani/Sentinel/releases/download/v1.0.1/sentinel-darwin-arm64.tar.gz"
+      sha256 "ec3dd30679de40c545d1b48967807282b1168f133f7036a8bdf800ecd452755a"
     else
-      url "https://github.com/icobani/Sentinel/releases/download/v1.0.0/sentinel-darwin-amd64.tar.gz"
-      sha256 "9033f8a00466e62cf290c2aa7cbb57a846f479db2a59ffb954a32162533cf996"
+      url "https://github.com/icobani/Sentinel/releases/download/v1.0.1/sentinel-darwin-amd64.tar.gz"
+      sha256 "75881f9c1a4905be82d833d0e2f3dbbaf0361cc6d5207531f78a990853aeebdd"
     end
   end
 
   on_linux do
-    url "https://github.com/icobani/Sentinel/releases/download/v1.0.0/sentinel-linux-amd64.tar.gz"
-    sha256 "4d4573a0a11a927e32f9481751338072a5c32ac6ec48ec7d945faa10c61dfac9"
+    url "https://github.com/icobani/Sentinel/releases/download/v1.0.1/sentinel-linux-amd64.tar.gz"
+    sha256 "4135b2546ff2e45f14b39eeb2227dbb40ded791399ae0aedc120c3ba130e4306"
   end
 
   def install
     bin.install "sentinel"
-    etc.install "sentinel.yaml.example" => "sentinel.yaml" unless (etc/"sentinel.yaml").exist?
   end
 
   service do
